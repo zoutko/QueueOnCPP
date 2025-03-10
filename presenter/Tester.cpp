@@ -10,12 +10,8 @@ public:
     }
 
     void displayFront() {
-        try {
             int value = queue.peek();
             std::cout << "Frente de la cola: " << value << std::endl;
-        } catch (const std::out_of_range& e) {
-            std::cout << "Error: " << e.what() << std::endl;
-        }
     }
 
     void deleter(){
