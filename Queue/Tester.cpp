@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../Queue/MyQueue.cpp"
+#include "MyQueue.hpp"
 class Tester{
 private:
     MyQueue<int> queue;
@@ -43,6 +43,7 @@ int main() {
     test.displayFront();
 
     test.deleter();
+    test.displayFront();
     test.askEmpty();
     
     return 0;
