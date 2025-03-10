@@ -8,9 +8,7 @@ public:
     void addElement(int value) {
         queue.push(value);
     }
-    
 
-    
     void displayFront() {
         try {
             int value = queue.peek();
@@ -19,6 +17,22 @@ public:
             std::cout << "Error: " << e.what() << std::endl;
         }
     }
+
+    void deleter(){
+        int value = queue.poll();
+        std::cout << "Elemento eliminado: " << value << std::endl;
+    }
+
+    void askEmpty(){
+        if (queue.isEmpty())
+        {
+            std::cout << "La cola esta vacia" << std::endl;
+        }else{
+            std::cout << "La cola tiene elementos" << std::endl; 
+        }    
+    }
+
+
 };
 
 
@@ -31,6 +45,9 @@ int main() {
     
     test.displayFront();
     test.displayFront();
+
+    test.deleter();
+    test.askEmpty();
     
     return 0;
 }
