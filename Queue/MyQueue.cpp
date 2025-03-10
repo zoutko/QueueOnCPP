@@ -5,8 +5,9 @@ class MyQueue{
     private:
         Node<T> head;
         Node<T> tail;
-    public: 
-        MyQueue();
+    public:
+        MyQueue():head(nullptr), tail(nullptr){}
+        // MyQueue();
         // void push(T);
         T poll();
         T peek();
@@ -18,7 +19,7 @@ class MyQueue{
             head = newNode;
             tail = newNode;
         } else {
-            tail->next = newNode;
+            tail->setNext = newNode;
             tail = newNode;
         }
     }
@@ -29,8 +30,8 @@ class MyQueue{
 
 };
 
-template<typename T>
-MyQueue<T>:: MyQueue(): head(nullptr),tail(nullptr){}
+// template<typename T>
+// MyQueue<T>:: MyQueue(): head(nullptr),tail(nullptr){}
 
 // template<typename T>
 // T MyQueue<T>::push(T data) {
